@@ -38,6 +38,12 @@ if arq is not None:
 
         T = st.selectbox('Turma', options=Turmas)
 
+        col1, col2 = st.columns(2)
+        with col1:
+            T = st.selectbox('Turma', options=Turmas)
+        with col2:
+            N_aulas = st.selectbox('Número de aulas/dia',(4,5,6))
+
         filtroT = Filt[Filt['COD_TURMA']==T]
 
         Agrupado = (
@@ -54,8 +60,8 @@ if arq is not None:
         .reset_index()
         )
 
-        st.subheader('Alunos com mais de 8 faltas')
-        resumo = resumo[resumo["FALTAS/AULA"] >= 8]   
+        st.subheader(f'Alunos com mais de {N_aulas*2} faltas')
+        resumo = resumo[resumo["FALTAS/AULA"] >= N_aulas*2]   
         st.write(resumo) 
     else:
         st.warning("O período do arquivo é maior do que 1 semana",icon="⚠️")
