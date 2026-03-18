@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import numpy as np
 
 # Le o arquivo csv
 st.title('Sistema de verificação de faltas')
