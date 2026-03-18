@@ -36,8 +36,6 @@ if arq is not None:
         Filt = Alunos[Alunos["DATA"].between(Inicio,Fim)]
         Turmas = Alunos["COD_TURMA"].unique()
 
-        T = st.selectbox('Turma', options=Turmas)
-
         col1, col2 = st.columns(2)
         with col1:
             T = st.selectbox('Turma', options=Turmas)
