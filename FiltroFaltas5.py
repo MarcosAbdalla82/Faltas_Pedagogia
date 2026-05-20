@@ -30,8 +30,8 @@ if arq is not None:
     Alunos["DATA"] = pd.to_datetime(Alunos["DATA"], dayfirst=True)
     Alunos["DATA"] = Alunos["DATA"].dt.date
 
-    Dias = Alunos["DATA"].unique()
-
+    #Dias = Alunos["DATA"].unique()
+    Dias = sorted(Alunos["DATA"].unique())
     Inicio = Dias[0]
     Fim = Dias[-1]
     Dt = Fim - Inicio
