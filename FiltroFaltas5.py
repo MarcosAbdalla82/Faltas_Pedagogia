@@ -37,7 +37,7 @@ if arq is not None:
     Dt = Fim - Inicio
     dT = Dt.days # Numero de dias
     
-    if dT<=5: 
+    if dT<=50: 
 
         Filt = Alunos[Alunos["DATA"].between(Inicio,Fim)]
         Turmas = Alunos["COD_TURMA"].unique()
