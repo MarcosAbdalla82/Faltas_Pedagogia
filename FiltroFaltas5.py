@@ -67,6 +67,13 @@ if arq is not None:
         st.subheader(f'Alunos com mais de {N_aulas*2} faltas')
         resumo = resumo[resumo["FALTAS/AULA"] >= N_aulas*2]   
         st.write(resumo) 
+
+        X = st.st.number_input('Número de faltas total',min_value=N_aulas*2)
+        
+        st.subheader(f'Alunos com mais de {X} faltas')
+        resumo2 = resumo[resumo["FALTAS/AULA"] >= X]   
+        st.write(resumo2) 
+    
     else:
         st.warning("O período do arquivo é maior do que 1 semana",icon="⚠️")
 
