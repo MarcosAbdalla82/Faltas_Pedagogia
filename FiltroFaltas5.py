@@ -68,7 +68,7 @@ if arq is not None:
         resumo = resumo[resumo["FALTAS/AULA"] >= N_aulas*2]   
         st.write(resumo) 
 
-        X = st.st.number_input('Número de faltas total',min_value=N_aulas*2)
+        X = st.number_input('Número de faltas total',min_value=N_aulas*2)
         
         st.subheader(f'Alunos com mais de {X} faltas')
         resumo2 = resumo[resumo["FALTAS/AULA"] >= X]   
