@@ -55,8 +55,8 @@ if arq is not None:
             .size()
             .reset_index(name="FALTAS/AULA")
         )
-        st.subheader('Alunos faltoso na semana')
-        st.write(Agrupado)
+        #st.subheader('Alunos faltoso na semana')
+        #st.write(Agrupado)
 
         resumo = (
         Agrupado.groupby(["ALUNO", "COD_TURMA"])["FALTAS/AULA"]
